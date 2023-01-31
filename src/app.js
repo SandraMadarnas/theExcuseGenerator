@@ -7,27 +7,24 @@ import "./assets/img/4geeks.ico";
 
 // /* EXCUSES GENERATOR */ //
 window.onload = () => {
-  //write your code here
-  document.querySelector("#btn").addEventListener("click", () => {
-    document.querySelector("#excuse").innerHTML = generateExcuse();
+  document.getElementById("btn").addEventListener("click", () => {
+    document.getElementById("excuse").innerHTML = onLoad();
   });
 
-  console.log("Hello Rigo from the console!");
-};
+  const onLoad = () => {
+    let who = ["El perro", "La abuela", "La tortuga", "Mi pajaro"];
+    let what = ["se comió  mi tarea", "meó todo", "chocó", " se rompió"];
+    let when = [
+      "antes de clases",
+      "todo el tiempo",
+      "cuando termino",
+      "durante mi almuerzo",
+      "mientras juego"
+    ];
 
-let generateExcuse = () => {
-  let who = ["El perro", "Mi mamá", "Mi tortuga", "Mi pájaro"];
-  let what = ["come", "meado", "aplastado", "roto"];
-  let when = [
-    "antes de la clase",
-    "justo ahora",
-    "cuando terminé",
-    "durante mi almuerzo",
-    "mientras rezaba"
-  ];
-  let whoIndex = Math.floor(Math.random() * who.length);
-  let whatIndex = Math.floor(Math.random() * what.length);
-  let whenIndex = Math.floor(Math.random() * when.length);
-
-  return who[whoIndex] + " " + what[whatIndex] + " " + when[whenIndex];
+    let whoIndex = Math.floor(Math.random() * who.length);
+    let whatIndex = Math.floor(Math.random() * what.length);
+    let whenIndex = Math.floor(Math.random() * when.length);
+    return who[whoIndex] + " " + what[whatIndex] + " " + when[whenIndex];
+  };
 };
