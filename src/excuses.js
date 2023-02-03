@@ -11,8 +11,6 @@ window.onload = () => {
   document.querySelector("#btn").addEventListener("click", () => {
     document.querySelector("#excuse").innerHTML = generateExcuse();
   });
-
-  console.log("Hello Rigo from the console!");
 };
 
 let generateExcuse = () => {
@@ -23,7 +21,7 @@ let generateExcuse = () => {
     "justo ahora",
     "cuando terminé",
     "durante mi almuerzo",
-    "mientras rezaba"
+    "mientras rezaba",
   ];
   let whoIndex = Math.floor(Math.random() * who.length);
   let whatIndex = Math.floor(Math.random() * what.length);
